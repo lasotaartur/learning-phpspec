@@ -16,9 +16,7 @@ class TimingBeltReplacementPredicate
             return true;
         }
 
-        $now = new DateTime();
         $interval = $carDto->getDateOfConstruction()->diff($this->currentDateTime);
-
         if ($interval->days >= 1826) {
             return true;
         }
